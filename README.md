@@ -47,6 +47,8 @@ and the type of the node is the name you give while adding executables in the CM
      ```
      init(argc, argv, "node_name")".
      ```
-     The name you defined in the launch file will be the final one shown in the rqt_graph. In addition, by using the launch file, the roscore will be automatically started.  
+     The name you defined in the launch file will be the final one shown in the rqt_graph. In addition, by using the launch file, the roscore will be automatically started. 
+     
+     There is another advantage by usnig launch to start the node: the same excutable can be used to start multiple nodes with the similar functions but different identities (names), which is not so handy by using the command line method.
      
      It seems that the "launch" method has relatively higher level.
