@@ -6,17 +6,18 @@ and the type of the node is the name you give while adding executables in the CM
 
 - 3.In the geometry_msgs/Quaternion type, the quaternion is expressed as a vector \[x,y,z,w\]. The quaternion can be written as:
     <pre>
-    w + x*<b>i</b> + y**j** + z**k**. 
+    w + x*<b>i</b> + y*<b>j</b> + z*<b>k</b>. 
     </pre>
+    
     This quaternion can be used to obtain the rotation matrix by using the formulas in [Quaternion and spatial rotation wiki](https://en.wikipedia.org/wiki/Quaternions_and_spatial_rotation). But pay attention to the sequence of the symbols where a,b,c,d are used with the expression 
-    ```
-    a + b\***i** + c\***j** + d\***k**.
-    ```
+    <pre>
+    a + b*<b>i</b> + c*<b>j</b> + d*<b>k</b>. 
+    </pre>
     
     Also, the relationship between four elements of the quaternion is:  
-    ```
+    <pre>
     a\^2 + b\^2 + c\^2 + d\^2 = 1.  
-    ```
+    </pre>
 
     Sometimes the RPY parameters are provided, and the rotation matrix can be calculated by using the expression: R = Rx\*Ry\*Rz. But note that the rotaion sequence is roll-pitch-yaw.
 
