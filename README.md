@@ -4,7 +4,7 @@ and the type of the node is the name you give while adding executables in the CM
 
 - 2.In order for the message to be used correctly in Rviz, the "msg.header.stamp = ros::Time::now()" may not be forgotten.
 
-- 3.In the geometry_msgs/Quaternion type, the quaternion is expressed as a vector \[x,y,z,w\]. The quaternion can be written as:
+- 3.In the **geometry_msgs/Quaternion** type, the quaternion is expressed as a vector \[x,y,z,w\]. The quaternion can be written as:
     <pre>
     w + x*<b>i</b> + y*<b>j</b> + z*<b>k</b>. 
     </pre>
@@ -16,7 +16,7 @@ and the type of the node is the name you give while adding executables in the CM
     
     Also, the relationship between four elements of the quaternion is:  
     <pre>
-    a\^2 + b\^2 + c\^2 + d\^2 = 1.  
+    a^2 + b^2 + c^2 + d^2 = 1.  
     </pre>
 
     Sometimes the RPY parameters are provided, and the rotation matrix can be calculated by using the expression: R = Rx\*Ry\*Rz. But note that the rotaion sequence is roll-pitch-yaw.
