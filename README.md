@@ -53,14 +53,14 @@ and the type of the node is the name you give while adding executables in the CM
 
      It seems that the "launch" method has relatively higher level.
 
-- 5.In the [urdf tutorial step 1](https://wiki.ros.org/urdf/Tutorials/Building a Visual Robot Model with URDF from Scratch), the example for the "One Shape" case does not work. It is because only one link is defined in the urdf file and the tf package can not calculate the transform information which is required by the Rviz to view the model. So in order to view the model in Rviz, at lease two links and one joint which relates them sohuld be defined in the urdf file.
+- 5.In the [urdf tutorial step 1](https://wiki.ros.org/urdf/Tutorials/Building_a_Visual_Robot_Model_with_URDF_from_Scratch), the example for the "One Shape" case does not work. It is because only one link is defined in the urdf file and the tf package can not calculate the transform information which is required by the Rviz to view the model. So in order to view the model in Rviz, at lease two links and one joint which relates them sohuld be defined in the urdf file.
 
     For the <origin> tag in the urdf file:
     - if it is in the <joint> tag, the xyz represents the origin of the child link frame with respect to the parent link frame, and the RPY represents the rotation in the order of "Roll-Pitch-Yaw" starting from the parent link frame to the child frame. If there is no value assigned, the default value is
     ```
-    - <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />.
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />.
     ```
     - if it is in the <link> tag, the xyz and RPY specify the location and orientation of the visualized geometry with respect to the link frame. The xyz represents the origin of the link geometry frame with respect to the link frame, and the RPY represents the rotation in the order of "Roll-Pitch-Yaw" starting from the link frame to the link geometry frame. If there is no value assigned, the default value is
     ```
-    - <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />.
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />.
     ```
