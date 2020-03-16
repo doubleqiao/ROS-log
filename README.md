@@ -52,3 +52,5 @@ and the type of the node is the name you give while adding executables in the CM
      There is another advantage by usnig launch to start the node: the same excutable can be used to start multiple nodes with the similar functions but different identities (names), which is not so handy by using the command line method.
      
      It seems that the "launch" method has relatively higher level.
+     
+- 5. In the urdf tutorial ([URDF tutorial step 1](wiki.ros.org/urdf/Tutorials/Building a Visual Robot Model with URDF from Scratch)), the example for the "One Shape" case does not work. It is because only one link is defined in the urdf file and the tf package can not calculate the transform information which is required by the Rviz to view the model. So in order to view the model in Rviz, at lease two links and one joint which relates them sohuld be defined in the urdf file. 
